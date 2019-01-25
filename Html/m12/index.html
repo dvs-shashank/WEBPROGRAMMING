@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Week2 Exam</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script type = "text/javascript" src="index.js"></script>
+  <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body class="body">
+
+<div class="container bg">
+  <h2 style="position: relative;left:355px;"> Welcome to secret key login page.</h2>
+  <form class="form-horizontal" action="index.html" onsubmit="validateForm()">
+    <div class="form-group">
+      <label class="control-label col-sm-2 " for="name" style="margin-top:15px;">Name:</label>
+      <div class="col-sm-10">
+        <input type="name" class="form-control" id="name" placeholder="Enter name" name="fname" style="width: 650px;margin-top:15px;">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="comment">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Comment:</label>
+      <textarea class="form-control" rows="5" id="comment" style = "position: relative;left:210px;width:650px;"></textarea>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Enter secret key:</label>
+      <div class="col-sm-10">          
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" style="width: 650px;">
+      </div>
+    </div>
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-success">Post comment</button>
+      </div>
+    </div>
+    <div class ="comment-division" id="division" style="display: none;">
+    </div>
+  </form>
+</div>
+</body>
+</html>

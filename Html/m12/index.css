@@ -1,0 +1,21 @@
+.body {
+	/*background:url('image.jpg');*/
+	/*background-repeat: no-repeat;*/
+	background-color: rgb(168, 248, 91);
+	color: black;
+	height: 100%;
+	width: 100%;
+}
+.form-horizontal {
+	border:1px solid;
+	margin-top:  100px;
+	padding: 30px 40px;
+	-webkit-box-shadow: 1px 4px 26px 11px rgba(0,0,0,0.75);
+-moz-box-shadow: 1px 4px 26px 11px rgba(0,0,0,0.75);
+box-shadow: 1px 4px 26px 11px rgba(0,0,0,0.75);
+}
+.comment-division {
+	height:200px;
+	background-color: black;
+	margin: 35px;
+}
