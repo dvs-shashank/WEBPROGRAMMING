@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="catalog.js"></script>
+        <style type="text/css">
+          #body {
+            background-repeat: none;
+          }
+          .form-class {
+            /*border:2px solid;*/
+            font-size: 20px;
+            /*border-spacing: 2px;*/
+            position: absolute;
+            left:800px;
+            top:200px;
+          }
+        </style>    
+    </head>
+    <body onload="load()" style="" align ="center;" background="bg.png">
+    <div id= "title" style="position: relative; left:220px; margin-top: 50px; font-size: 30px;">
+
+    </div>
+    <div id= "description" style="position: relative; left:220px;margin-top: 10px; font-size: 30px;">
+
+    </div>
+    <div id= "image" style="position: relative; left:220px;margin-top: 10px; font-size: 30px;">
+
+    </div>
+    <div id= "quantity" style="position: relative; left:220px; margin-top: 10px; font-size: 30px;">
+
+    </div>
+    <div>
+    	<input type="button" name=" next" onclick="next()" id = "next" value = "next" style="float: left;position: relative; left:220px; margin: 5px;">
+    </div>
+     <div>
+        <input type="button" name=" prev" onclick="prev()" id = "prev" value = "prev" style="position: relative;left:220px;margin: 5px;">
+    </div>
+    <div>
+        <input type="button" name=" delete" onclick="deleteInfo()" id = "delete" value = "delete" style="position: relative;left:220px;margin: 5px;">
+    </div>
+    <div class = "form-class">
+        <form>
+            <label>Title:</label><br>
+            <input type="text" name="titleid" id = "titleid"><br>
+            <label>Description:</label><br>
+            <input type="text" name="" id = "descid"><br>
+            <label>Quantity:</label><br>
+            <input type="text" name="" id = "quantid"><br>
+        </form>
+        <input type="button" name="" id ="submitButton" onclick="update()" value ="Update">
+    </div>
+    </body>
+</html>
