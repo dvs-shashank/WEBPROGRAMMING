@@ -1,0 +1,46 @@
+<br><br>	
+<div class="container">
+    <div class="row">
+    	<div class="col-md-3">
+			<div class="thumbnail" style="height:325px; width:250px;">
+        
+			  <img src="assets\img\{{data.img}}" class="img-responsive" style="object-fit:cover;max-width:100;max-height:100%;">
+      </div>
+    </div>
+      <div class="caption">
+					<!-- <div class="row"> -->
+            <div class = "col-md-1"></div>
+						<div class="col-md-8" align="center">
+				<h4 class="text-center"><span class="label label-info">{{data.productTitle}}</span></h4>
+
+              <h3>Description</h3>
+              <ul *ngFor = "let description of data.productDescription">
+                <li> {{description }}</li>
+              </ul>
+              <p>Price: ${{data.price}}</p>
+						  <p>Quantity: {{data.quantity}}</p>
+          </div>
+					<!-- </div> -->
+      </div>
+		</div><br>
+
+        <div class="row">
+            <button (click) = "addToCart(data.prodId)" class="btn btn-primary btn-product"><span class="glyphicon glyphicon-shopping-cart"></span><span class="popuptext" id="myPopup">Add</span>ToCart</button>&nbsp;
+           <a routerLink = "/checkout" (click) = "addToCart(data.prodId)" class="btn btn-primary btn-product"><span class="glyphicon glyphicon-flash"></span>Buy</a>&nbsp;			
+           <a class="btn btn-primary btn-product" (click)="review()" style="color:white;"><span class="glyphicon glyphicon-star"></span>ReviewsandRatings</a>&nbsp;
+        </div>  
+        <!-- </div> -->
+	<!-- </div> -->
+	 
+</div>
+<div class="container"><div *ngIf="reviewRQ">
+    <form>
+            UserName: <input type="text" name="uname" [(ngModel)]="uname" [ngModelOptions]="{standalone: true}" >
+            Comments: <textarea name="comments" id="" cols="30" rows="10" [(ngModel)]="comments" [ngModelOptions]="{standalone: true}"></textarea>
+            Rating: <input type = "number" min = "1" max = "5" [(ngModel)] = "rating" [ngModelOptions]="{standalone: true}">
+    </form>
+      <button (click)="reviewSubmit()">Submit</button>
+  </div>
+  {{uname}}<br>
+  {{comments}}</div>
+
